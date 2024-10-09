@@ -1,0 +1,3 @@
+
+[+] 08/10/2024 @ 23:13:20 : kali@kali: ~/Documents/spyware
+ps aux[RETURN]ps kill [RETURN][BACKSPACE][RETURN]kill [RETURN]
