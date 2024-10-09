@@ -1,6 +1,6 @@
 # Simple Spyware (Educational only)
 
-This program is a spyware application that includes functionalities for keylogging, screenshot capturing, and sending data to a server each 5 minutes using the Chilkat library.
+This program is a spyware application that includes functionalities for keylogging (thanks to `@cyrus-and`), screenshot capturing, and sending data to a server each 5 minutes using the Chilkat library.
 
 ## Features
 
